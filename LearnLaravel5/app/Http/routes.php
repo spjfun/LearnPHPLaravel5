@@ -17,8 +17,9 @@
 
 
 Route::get('first', function(){
-	
-	return view('first');
+	$name = "yeee";
+	$gender = "ee";
+	return View::make('first')->with('name', $name)->with('gender', $gender);
 });
 
 

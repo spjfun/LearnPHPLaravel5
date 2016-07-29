@@ -5,5 +5,7 @@
 </head>
 <body>
 	這是一個網頁~~
+	<p>我的姓名: {{ $name }}</p>
+	<p>我的性別: <?php echo $gender; ?></p>
 </body>
 </html>
