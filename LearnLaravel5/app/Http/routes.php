@@ -15,6 +15,13 @@
 //     return view('welcome');
 // });
 
+
+Route::get('first', function(){
+	
+	return view('first');
+});
+
+
 Route::get('/', function()
 {
 	//如果是在網址列中輸入http://網址/資料夾/public/index.php，會看到Hello World。
