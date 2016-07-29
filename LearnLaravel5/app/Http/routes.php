@@ -15,6 +15,11 @@
 //     return view('welcome');
 // });
 
+//第二個參數從原本的匿名函式換成 Controller 的名稱 @ 方法名稱。
+//Route -> Controller -> View
+//這是 Controller 的基本功能
+Route::get('/', 'HomeController@index');
+
 
 Route::get('first', function(){
 	$name = "yeee";
@@ -23,11 +28,29 @@ Route::get('first', function(){
 });
 
 
-Route::get('/', function()
-{
-	//如果是在網址列中輸入http://網址/資料夾/public/index.php，會看到Hello World。
-	return 'Hello World';
+Route::get('message', function(){
+
+	return View::make('message', array());
 });
+
+Route::get('message/insert', function(){
+
+	return View::make('message', array());
+});
+
+Route::post('message/insert', function(){
+	$title = Input::get('title');
+	$content = Input::get('content');
+	echo "title is $title&lt;br>";
+	echo "content is $content&lt;br>";
+});
+
+
+// Route::get('/', function()
+// {
+// 	//如果是在網址列中輸入http://網址/資料夾/public/index.php，會看到Hello World。
+// 	return 'Hello World';
+// });
 
 
 Route::post('meassage/list', function()
