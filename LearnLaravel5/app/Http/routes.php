@@ -20,6 +20,9 @@
 //這是 Controller 的基本功能
 Route::get('/', 'HomeController@index');
 
+//post/{id}' 中的 post 是網址的一部份，後面的 {id} 表示為參數。動作的部份指定為新的方法 @show。
+Route::get('post/{id}', 'HomeController@show');
+
 
 Route::get('first', function(){
 	$name = "yeee";

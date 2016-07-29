@@ -10,4 +10,11 @@ class HomeController extends Controller
     		->with('title', '首頁')
     		->with('hello', '大家好~~');
     }
+
+    public function show($id){
+
+		return View::make('home')
+    		->with('title', '首頁')
+    		->with('hello', '大家好~~' .$id);
+    }
 }
