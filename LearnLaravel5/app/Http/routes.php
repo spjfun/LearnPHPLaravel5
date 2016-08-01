@@ -18,7 +18,9 @@
 //第二個參數從原本的匿名函式換成 Controller 的名稱 @ 方法名稱。
 //Route -> Controller -> View
 //這是 Controller 的基本功能
-Route::get('/', 'HomeController@index');
+//Route::get('/', 'HomeController@index');
+//首頁：顯示文章的標題清單
+Route::get('post', 'HomeController@index');
 
 //post/{id}' 中的 post 是網址的一部份，後面的 {id} 表示為參數。動作的部份指定為新的方法 @show。
 Route::get('post/{id}', 'HomeController@show');
