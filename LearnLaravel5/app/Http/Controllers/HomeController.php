@@ -6,9 +6,12 @@ class HomeController extends Controller
 {
     public function index(){
 
-    	return View::make('home')
-    		->with('title', '首頁')
-    		->with('hello', '大家好~~');
+        //Post Model 取得全部文章，回傳值會是一個陣列
+        $posts = Post::all();
+
+        return View::make('home')
+                ->with('title', 'My Blog')
+                ->with('posts', $posts)
     }
 
     public function show($id){
